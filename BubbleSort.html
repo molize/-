@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+ * @Author: lxhihb@163.com 
+ * @Date: 2018-06-18 13:40:43 
+ * @Last Modified by: li.xiaohua
+ * @Last Modified time: 2018-06-18 16:47:10
+ */
+
+ //冒泡排序
+//随机生成一组数组
+
+//包含最小值不包含最大值
+function getRandom(start,end) {
+    let length = end - start;
+    return parseInt(Math.random() * (length) + start);
+}
+
+let arr = [];
+
+ //生成数组
+for(let i = 0;i < 5; i++) {
+    let num = getRandom(1,10);
+    arr.push(num);
+}
+console.log(arr);
+
+
+let arrLen =  arr.length;
+//交换位置
+for(let i = 0;i < arr.length; i++) {
+    for(let j = i + 1;j <arr.length;j++) {
+        if(arr[i] > arr[j]) {
+            let temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+        }
+    }
+}
+console.log(arr);
+</script>
+</html>
